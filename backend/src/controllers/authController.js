@@ -4,9 +4,15 @@ import  supabase  from '../config/supabaseClient.js'
 
 
 export async function cadastrarUsuario (req, res){
-
+    try{
     const { nome, email, telefone, senha } = req.body;
     
+    if (!nome || !email || !telefone || !senha ){
+        return res.status(400).json({
+            mensagem: "Nome, e-mail, telefone e senha são obrigatórios"
+        });
+    }
+
     const senhaHash = await bcrypt.hash(senha, 10);
 
     const { data, error } = await supabase
@@ -27,20 +33,28 @@ export async function cadastrarUsuario (req, res){
             mensagem: "Erro ao cadastrar usuário",
             erro: error.message
         });
-    } else {
-
+    } 
+    
         return res.status(201).json({
         mensagem: "Usuário cadastrado com sucesso !",
     });
 
-
-
+    }catch (error){
+        console.error(error);
+        return res.status(500).json({
+            mensagem: "Erro interno do servidor"
+        });
     }
+
+}
+
+
+    
 
     
 
 
-}
+
 
 export const loginUsuario = async (req,res) => {
     try{
@@ -67,6 +81,7 @@ export const loginUsuario = async (req,res) => {
         return res.status(401).json({
             mensagem: "E-mail ou senha inválidos!"
         });
+    
     }
 
     //Comparação de senha informada pelo usuário com o hash do banco
