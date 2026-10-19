@@ -77,22 +77,11 @@ cp .env.example .env
 npm run dev
 ```
 
-### Variáveis de ambiente
 
-Veja o arquivo `.env.example`. As variáveis esperadas são:
-
-| Variável | Descrição |
-|---|---|
-| `SUPABASE_URL` | URL do seu projeto no Supabase |
-| `SUPABASE_KEY` | Chave de acesso do Supabase |
-| `JWT_SECRET` | Segredo usado para assinar os tokens JWT |
-| `PORT` | Porta em que o servidor vai rodar |
-
-> ⚠️ Nunca suba o arquivo `.env` para o repositório. Confirme que ele está no `.gitignore`.
 
 ## 👤 Autor
 
 **Lucas da Silva Correia**
 
 - GitHub: [LucasCorreiaDeveloper](https://github.com/LucasCorreiaDeveloper)
-- LinkedIn: [adicionar link]
+- LinkedIn: (https://www.linkedin.com/in/lucas-correia-05a092281/)
