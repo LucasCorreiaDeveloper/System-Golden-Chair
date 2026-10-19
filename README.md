@@ -84,4 +84,4 @@ npm run dev
 **Lucas da Silva Correia**
 
 - GitHub: [LucasCorreiaDeveloper](https://github.com/LucasCorreiaDeveloper)
-- LinkedIn: (https://www.linkedin.com/in/lucas-correia-05a092281/)
+- LinkedIn: [Lucas Correia || LinkedIn](https://www.linkedin.com/in/lucas-correia-05a092281/)
