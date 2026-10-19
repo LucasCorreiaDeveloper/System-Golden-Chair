@@ -47,10 +47,6 @@ O objetivo é permitir que clientes agendem horários online e que a barbearia g
 - [ ] Front-end
 - [ ] Deploy
 
-## 🎨 Design e banco de dados
-
-- **Protótipo no Figma:** [adicionar link]
-- **Diagrama do banco de dados:** [adicionar imagem ou link do dbdiagram.io]
 
 ## 🚀 Como rodar localmente
 
