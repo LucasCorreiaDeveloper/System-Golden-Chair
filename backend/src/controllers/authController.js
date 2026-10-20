@@ -128,3 +128,28 @@ export const loginUsuario = async (req,res) => {
         });
     }
 }
+
+export async function listarServiços(req, res) {
+    try {
+        const { data, error } = await supabase 
+        .from("servicos")
+        .select("*")
+        .order("nome", {ascending: true});
+
+        if (error) {
+            return res.status(400).json({
+                mensagem: "Erro ao buscar serviços",
+                erro: error.message
+            });
+        }
+
+        return res.status(200).json({ servicos: data});
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({
+            mensagem: "Erro interno do servidor"
+        });
+    }
+}
+
